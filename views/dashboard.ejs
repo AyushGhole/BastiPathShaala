@@ -1,0 +1,128 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <!-- Navbar Secgtion -->
+    <nav class="navbar sticky-top bg-body-tertiary">
+      <div class="container-fluid" style="display: flex; flex-direction: row-reverse;">
+        <a class="navbar-brand" href="#">
+          <%= currUser.username %>
+        </a>
+      </div>
+    </nav>
+
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Hello <span class="highlight">
+            <%= currUser.username %>
+          </span>,</h1>
+        <p>Initial push is the toughest! Go through the learning modules, or reach out to your fundraising manager to
+          level up.</p>
+      </div>
+    </div>
+
+
+    <div class="second">
+      <div class="progress-container">
+        <div class="progress-circle">
+          <span class="achieved">10</span>
+        </div>
+        <p class="goal-text">Goal Achieved</p>
+        <p class="total-goal">Total Goal <br> <strong>₹30,000</strong></p>
+        <button class="whatsapp-btn">📲 Share On Whatsapp</button>
+        <input type="text" id="donation-link" value="https://example.com/donation" readonly hidden>
+      </div>
+
+
+
+      <div class="rewards-container">
+        <p class="level-achieved">Level Achieved: <strong>Star</strong></p>
+
+        <hr>
+
+        <div class="rewards-buttons">
+          <button class="reward-btn">🎁 Rewards</button>
+          <button class="donation-link-btn">🔗 Copy Donation Link</button>
+          <input type="text" id="donation-link" value="https://example.com/donation" readonly hidden>
+        </div>
+
+        <p class="unlock-text" style="margin-top: 30px;">Unlock <i>Mega Level</i> at 5000</p>
+
+        <p class="time-left" style="margin-top: 30px;">Time Left: <strong style="color: black;">Campaign
+            Expired</strong></p>
+        <button class="extend-btn">Extend Now</button>
+
+        <hr>
+
+        <p class="reference-code time-left">Reference Code: <strong style="color: black;">
+            <%= currUser.username %>#234
+          </strong></p>
+        <form method="get" action="/donate/<%= currUser._id %>">
+          <button class="donate-btn start-btn">Start Here</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Javascript code to copy the link to the clipboard -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const copyBtn = document.querySelector(".donation-link-btn");
+      const linkInput = document.getElementById("donation-link");
+
+      copyBtn.addEventListener("click", function () {
+        // Copy the link to clipboard using modern Clipboard API
+        navigator.clipboard.writeText(linkInput.value).then(() => {
+          // Show user feedback
+          copyBtn.textContent = "✅ Copied!";
+          copyBtn.style.background = "#4CAF50"; // Change color to green
+
+
+          // Reset button text after 2 seconds
+          setTimeout(() => {
+            window.alert('Link Copied to Your clipboard !!  ');
+            copyBtn.textContent = "🔗 Copy Donation Link";
+            copyBtn.style.background = ""; // Reset background color
+          }, 1000);
+        }).catch(err => {
+          console.error("Failed to copy: ", err);
+          alert("Failed to copy. Please try again!");
+        });
+      });
+    });
+
+    // Whatsapp chat 
+    document.addEventListener("DOMContentLoaded", function () {
+      const whatsappBtn = document.querySelector(".whatsapp-btn");
+      const donationLink = document.getElementById("donation-link").value;
+
+      whatsappBtn.addEventListener("click", function () {
+        // Predefined WhatsApp message
+        const message = `Hi, I am raising funds for an NGO. Please support me by donating through this link: ${donationLink} and make a difference!`;
+
+        // Encode message for URL compatibility
+        const encodedMessage = encodeURIComponent(message);
+
+        // Create WhatsApp share link
+        const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+
+        // Open WhatsApp share window
+        window.open(whatsappURL, "_blank");
+      });
+    });
+
+
+  </script>
+
+  <style>
+    .overlay {
+      background-image: url("backImage.avif");
+      background-size: cover;
+      background-position: center;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  </style>

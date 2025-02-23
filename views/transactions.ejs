@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/styles/transactions.css">
+
+
+<body>
+  <div class="transaction-container">
+    <h2>📄 Donation Transactions</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Donor Name</th>
+          <th>Transaction ID</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% transactions.forEach(transaction=> { %>
+          <tr>
+            <td>
+              <%= user.username || "N/A" %>
+            </td>
+            <td>
+              <%= transaction._id || "N/A" %>
+            </td>
+            <td class="<%= transaction.status ? transaction.status : 'pending' %>">
+              success
+            </td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+
+    <a href="/dashboard" class="back-btn">⬅ Back to Dashboard</a>
+  </div>

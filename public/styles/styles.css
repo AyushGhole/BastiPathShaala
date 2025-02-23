@@ -1,0 +1,401 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FF5733;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+  display: block !important;
+  height: 100vh;
+  width: 90%;
+  background-color: rgb(182, 178, 178);
+  scroll-behavior: auto;
+  margin-bottom: 10px;
+}
+
+.hero-content {
+  background-color: rgb(14, 13, 13);
+  width: 85%;
+  padding: 0.5rem 0.72rem;
+  margin-left: 2rem;
+  margin: 7rem;
+  border-radius: 5px;
+}
+
+
+.hero-content h1 {
+  color: red;
+}
+
+.hero-content p {
+  color: white;
+}
+
+
+.second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: white;
+}
+
+.progress-container {
+  text-align: center;
+  height: 50vh;
+  width: 50%;
+  padding: 20px;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px dashed rgba(255, 87, 51, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF5733;
+  margin: auto;
+}
+
+.goal-text {
+  color: #FF5733;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.total-goal {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.whatsapp-btn {
+  background: #bd339a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5rem;
+  margin-right: 20rem;
+}
+
+.whatsapp-btn:hover {
+  background: #b71c1c;
+}
+
+.rewards-container {
+  text-align: center;
+  height: 50vh;
+  width: 50%;
+  padding: 20px;
+}
+
+.level-achieved {
+  color: #FF5733;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rewards-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 34px;
+}
+
+.reward-btn,
+.donation-link-btn {
+  background: #e26c94;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reward-btn {
+  background: #b71c1c;
+}
+
+.donation-link-btn {
+  background: #6c5ce7;
+}
+
+.time-left {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.extend-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+hr {
+  margin: 15px 0;
+  border: 1px solid #ddd;
+}
+
+.reference-code {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.start-btn {
+  background: #FF5733;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 4px;
+}/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+  display: block !important;
+  height: 100vh;
+  width: 90%;
+  background-color: rgb(182, 178, 178);
+  scroll-behavior: auto;
+  margin-bottom: 10px;
+}
+
+.hero-content {
+  background-color: rgb(14, 13, 13);
+  width: 85%;
+  padding: 0.5rem 0.72rem;
+  margin-left: 2rem;
+  margin: 7rem;
+  border-radius: 5px;
+}
+
+
+.hero-content h1 {
+  color: red;
+}
+
+.hero-content p {
+  color: white;
+}
+
+.overlay {
+  background-image: url("backImage.avif");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: white;
+}
+
+.progress-container {
+  text-align: center;
+  height: 50vh;
+  width: 50%;
+  padding: 20px;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px dashed rgba(255, 87, 51, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF5733;
+  margin: auto;
+}
+
+.goal-text {
+  color: #FF5733;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.total-goal {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.whatsapp-btn {
+  background: #bd339a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5rem;
+  margin-right: 20rem;
+}
+
+.whatsapp-btn:hover {
+  background: #b71c1c;
+}
+
+.rewards-container {
+  text-align: center;
+  height: 50vh;
+  width: 50%;
+  padding: 20px;
+}
+
+.level-achieved {
+  color: #FF5733;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rewards-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 34px;
+}
+
+.reward-btn,
+.donation-link-btn {
+  background: #e26c94;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reward-btn {
+  background: #b71c1c;
+}
+
+.donation-link-btn {
+  background: #6c5ce7;
+}
+
+.time-left {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.extend-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+hr {
+  margin: 15px 0;
+  border: 1px solid #ddd;
+}
+
+.reference-code {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.start-btn {
+  background: #FF5733;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+

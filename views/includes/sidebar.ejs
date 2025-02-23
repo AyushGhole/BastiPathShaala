@@ -1,0 +1,144 @@
+<div class="sidebar">
+  <a href="/logout" style="text-decoration: none;">
+    <div class="logo">
+      <button type="button" class="btn logo-btn">LogOut</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </a>
+  <ul class="menu">
+    <li class="menu-section">
+      <span class="menu-title">General</span>
+      <a href="/dashboard" class="menu-item icon-link ">
+        <i class="icon ">🛡</i> Dashboard
+      </a>
+    </li>
+    <li><a href="/trasactions/<%= currUser.id%>" class="icon-link"><i class="icon ">📄</i> Transactions</a></li>
+    <li><a href="#" class="icon-link"><i class="icon">🚀</i> Start Here</a></li>
+    <li><a href="#" class="icon-link"><i class="icon">❓</i> FAQ</a></li>
+    <li><a href="#" class="icon-link"><i class="icon">📚</i> Learning Modules</a></li>
+    <li><a href="#" class="icon-link"><i class="icon">⭐</i> Rewards</a></li>
+    <li><a href="#" class="icon-link"><i class="icon">💬</i> Feedback</a></li>
+  </ul>
+</div>
+
+<style>
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .sidebar {
+    width: 25%;
+    height: 150vh;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .logo-btn {
+    background: transparent;
+    border: 2px solid #00AEEF;
+    color: #00AEEF;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .logo-btn:hover {
+    background-color: #00AEEF;
+    color: #fff;
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .menu-section {
+    padding: 10px 0;
+  }
+
+  .menu-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 15px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: white;
+
+    border-radius: 8px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .active {
+    background: #e03e2d;
+  }
+
+  .menu-item:hover {
+    background: #ff725e;
+  }
+
+  .menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .menu li a:hover {
+    background: #f4f4f4;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+</style>
+
+<script>
+
+  let icons = document.querySelectorAll(".icon-link");
+  console.log(icons);
+
+  icons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      icon.classList.add("active");
+    });
+  });
+
+
+</script>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/styles/reciept.css">
+
+<body>
+  <div class="receipt-container">
+    <div class="receipt-card">
+      <h2>🎉 Donation Receipt</h2>
+      <p class="success-text">Thank you for your generous support!</p>
+
+      <div class="receipt-details">
+        <p><strong>Donor Name:</strong> <span id="donorName">
+            <%= user.username %>
+          </span></p>
+        <p><strong>Donation Status:</strong> <span id="status" class="<%= status %>">
+            <%= status %>
+          </span></p>
+        <p><strong>Amount Donated:</strong> ₹<span id="amount">
+            <%= transactions.amount %>
+          </span></p>
+      </div>
+
+      <button class="download-btn" onclick="window.print()">🖨 Print Receipt</button>
+      <a href="/dashboard" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+  </div>
+</body>

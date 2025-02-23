@@ -1,0 +1,160 @@
+/* Modal Overlay */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box with Glassmorphism Effect */
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+  color: white;
+}
+
+/* Close Button */
+.close-btn {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Input Field */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Payment Options */
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+/* Payment Buttons */
+.payment-btn {
+  border: none;
+  padding: 12px;
+  width: 120px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.upi-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.card-btn {
+  background: #007bff;
+  color: white;
+}
+
+.paypal-btn {
+  background: #ffcc00;
+  color: black;
+}
+
+.payment-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Donate Now Button */
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Styling for Select Field */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2); /* Glass effect */
+  color: white;
+  appearance: none; /* Remove default dropdown arrow */
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+/* Add a custom dropdown arrow */
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+}
+
+/* Style the dropdown options */
+option {
+  background: #444; /* Dark background for contrast */
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* On hover, change color */
+select:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,112 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+.receipt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.receipt-card {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+h2 {
+    color: #28a745;
+}
+
+.success-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.receipt-details {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.receipt-details strong {
+    color: #555;
+}
+
+.receipt-details .pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.receipt-details .success {
+    color: green;
+    font-weight: bold;
+}
+
+.receipt-details .failed {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buttons */
+.download-btn, .back-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.download-btn {
+    background: #007bff;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
+
+.back-btn {
+    display: block;
+    background: #ff4d4d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #cc0000;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
