@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userscontrollers = require("../controllers/userscontrollers");
+const userscontrollers = require("../Controllers/userscontrollers");
 const passport = require("passport");
 
 //Login Routing
