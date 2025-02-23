@@ -14,7 +14,7 @@ module.exports.getSignUpPage = (req, res) => {
 //LoggedIn User
 module.exports.postLoginRoute = async (req, res) => {
   // await req.alert("success", "Welcome back to Pay Way!!");
-  res.redirect("/login");
+  res.redirect("/dashboard");
 };
 
 //SignUp User Details and Saving in the databases
@@ -26,7 +26,7 @@ module.exports.postSignUpRoute = async (req, res) => {
     const registeredUser = await BastiUser.register(newUser, password);
     console.log("Registered Users : ", registeredUser);
     // req.alert("success", `${username} registered successfully!`);
-    res.redirect("/dashboard");
+    res.redirect("/login");
   } catch (err) {
     // req.flash("error", err.message);
     console.log(err.message);
