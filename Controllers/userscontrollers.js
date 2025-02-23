@@ -14,7 +14,7 @@ module.exports.getSignUpPage = (req, res) => {
 //LoggedIn User
 module.exports.postLoginRoute = async (req, res) => {
   // await req.alert("success", "Welcome back to Pay Way!!");
-  res.redirect("/dashboard");
+  res.redirect("/login");
 };
 
 //SignUp User Details and Saving in the databases
