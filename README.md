@@ -2,8 +2,10 @@
 Our NGO Donation Platform is a secure and transparent system that allows users to donate funds for social causes. Donors can track their transactions, receive receipts, and support initiatives via multiple payment options. The platform ensures trust, accountability, and impact-driven contributions to help those in need. 💖✨
 
 <br>
+<hr>
 <img src="/public/login.png" alt="login">
 <img src="public/signUp.png" alt="signUp"> 
+<hr>
 <h2>SetUp : </h2>
 <h3>📌 1. Clone the Repository</h3>
 <h3>📌 2. Install Dependencies</h3>
@@ -15,8 +17,11 @@ Our NGO Donation Platform is a secure and transparent system that allows users t
 2.) Donate via the donation page.<br>
 3.) View Transactions in your dashboard.<br>
 4.) Download Receipts for past donations.<br>
+<hr>
 <img src="/public/dashboard1.png" alt="dashboard">
 <img src="/public/dashboard2.png" alt="dashboard" >
 <img src="/public/payment.png" alt="payment" >
 <img src="/public/receipt.png" alt="receipt" > 
 <img src="/public/transaction.png" alt="transaction" >
+<hr>
+Deployed Link : https://bastipathshaala.onrender.com/login
